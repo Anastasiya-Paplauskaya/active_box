@@ -396,3 +396,110 @@ $primary-font: "Raleway", sans-serif;
 		}
 	}
 }
+
+.team{
+	margin-bottom: 124px;
+
+	@media(max-width: 1024px){
+		margin-bottom: 78px;
+	}
+	@media(max-width: 320px){
+		margin-bottom: 41px;
+	}
+
+	&__conteiner{
+		display: grid;
+		column-gap: 30px;
+		grid-template-columns: repeat(4, 1fr);
+
+		@media(max-width: 1024px){
+			column-gap: 25px;
+		}
+		@media(max-width: 320px){
+			display: block;
+		}
+	}
+
+	&__avatar-box{
+		padding-bottom: 30px;
+
+		@media(max-width: 1024px){
+			padding-bottom: 27px;
+		}
+		@media(max-width: 320px){
+			padding-bottom: 25px;
+		}
+	}
+	&__avatar{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	&__info{
+		padding-bottom: 38px;
+
+		@media(max-width: 1024px){
+			padding-bottom: 39px;
+		}
+		@media(max-width: 320px){
+			padding-bottom: 55px;
+		}
+	}
+	&__name{
+		@include font(24px, 28px, $title-color);
+		font-weight: 700;
+		padding-bottom: 5px;
+
+		@media(max-width: 1024px){
+			@include font(18px, 21px, $title-color);
+		}
+		@media(max-width: 320px){
+			@include font(18px, 21px, $title-color);
+		}
+	}
+	&__role{
+		@include font(18px, 21px, $button-color);
+		text-transform: uppercase;
+		padding-bottom: 18px;
+
+		@media(max-width: 1024px){
+			@include font(14px, 16px,  $button-color);
+			padding-bottom: 22px;
+		}
+		@media(max-width: 320px){
+			@include font(14px, 16px,  $button-color);
+			padding-bottom: 36px;
+		}
+	}
+	&__text{
+		@include font(18px, 21px, $text-color);
+
+		@media(max-width: 1024px){
+			@include font(14px, 16px,  $text-color);
+		}
+		@media(max-width: 320px){
+			@include font(14px, 16px,  $text-color);
+		}
+	}
+	&__socials{
+		display: flex;
+		column-gap: 5px;
+
+		@media(max-width: 320px){
+			column-gap: 6px;
+			padding-bottom: 49px;
+		}
+	}
+	.social__link{
+		text-align: center;
+		border: 1px solid #C6CBCD;
+		max-width: 39px;
+		width: 100%;
+		padding: 8px 8px;
+
+		@media(max-width: 1024px){
+			max-width: 33px;
+			padding: 5px 5px;
+		}
+	}
+}
