@@ -7,9 +7,13 @@ $hover-color: #BABBC5;
 $title-color: #2D3033;
 $text-color: #6C7279;
 $text-color-2: #000000;
+$text-footer-color: #808080;
 
 $swiper-color: #7E5D6F;
 $testimonial-color: #5C3249;
+$footer-top-color: #353C65;
+$footer-bottom-color: #2C3154;
+$border-color: #C6CBCD;
 
 
 $primary-font: "Raleway", sans-serif;
@@ -38,7 +42,6 @@ $primary-font: "Raleway", sans-serif;
 	margin: 0 auto;
 	border: none;
   }
-  
 
 .container{
     max-width: 1170px;
@@ -499,7 +502,7 @@ $primary-font: "Raleway", sans-serif;
 	}
 	.social__link{
 		text-align: center;
-		border: 1px solid #C6CBCD;
+		border: 1px solid $border-color;
 		max-width: 39px;
 		width: 100%;
 		padding: 8px 8px;
@@ -664,5 +667,72 @@ $primary-font: "Raleway", sans-serif;
 		@media(max-width: 320px){
 			@include font(18px, 21px, $primary-color);
 		}
+	}
+}
+.footer{
+	&__top{
+		padding-bottom: 67px;
+		padding-top: 71px;
+		background-color: $footer-top-color;
+	}
+	&__columns{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 30px;
+	}
+	&__column{
+		text-align: center;
+		max-width: 370px;
+		width: 100%;
+	}
+	&__title{
+		@include font(18px, 21px, $primary-color);
+		text-transform: uppercase;
+		font-weight: 700;
+		margin-bottom: 28px;
+	}
+	&__text{
+		@include font(18px, 21px, $primary-color);
+		text-transform: capitalize;
+	}
+	&__social{
+		display: flex;
+		justify-content: center;
+		column-gap: 26px;
+
+		@media(max-width: 1024px){
+			column-gap: 23px;
+		}
+		@media(max-width: 320px){
+			column-gap: 16px;
+		}
+	}
+	&__social-link{
+		text-align: center;
+		border: 1px solid $border-color;
+		max-width: 39px;
+		width: 100%;
+		padding: 8px 8px;
+
+		@media(max-width: 1024px){
+
+		}
+	}
+	&__bottom{
+		padding-bottom: 24px;
+		padding-top: 24px;
+		background-color: $footer-bottom-color;
+	}
+	&__copyright{
+		@include font(18px, 21px, $text-footer-color);
+		max-width: 370px;
+		width: 100%;
+		text-align: center;
+		margin: auto;
+		text-transform: capitalize;	
+	}
+	&__author{
+		@include font(18px, 21px, $primary-color);
 	}
 }
