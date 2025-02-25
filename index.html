@@ -7,6 +7,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 	<title>Active box</title>
 </head>
 <body>
@@ -247,6 +248,21 @@
 				<p class="testimonial__author">Susan Sims, Interaction Designer at XYZ</p>
 			</div>
 		</div>
+		<!-- Контейнер для слайдера -->
+		<div class="testimonial__swiper-container">
+			<!-- Обертка для слайдов -->
+			<div class="testimonial__swiper-wrapper">
+			<!-- Слайды -->
+				<div class="testimonial__swiper-slide"></div>
+				<div class="testimonial__swiper-slide"></div>
+				<div class="testimonial__swiper-slide"></div>
+				<div class="testimonial__swiper-slide"></div>
+				<div class="testimonial__swiper-slide"></div>
+			</div>
+		
+			<!-- Пагинация -->
+			<div class="testimonial__swiper-pagination"></div>
+		</div>
 	</div>
 	
 	<section class="download">
@@ -289,5 +305,6 @@
 			<p class="footer__copyright">Copyright © 2015 ActiveBox. All Rights Reserved Made with by <span class="footer__author">Kamal Chaneman</span></p>
 		</div>
 	</footer>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>
