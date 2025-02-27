@@ -37,9 +37,10 @@ $primary-font: "Raleway", sans-serif;
 }
 
 .header{
-	position: relative;
-	padding: 38px 0 36px;
-	z-index: 2;
+	position: sticky;
+  	top: 0;
+  	padding: 38px 0 36px;
+  	z-index: 1000;
 
 	@media(max-width: 320px){
 		padding: 21px 0 0;
