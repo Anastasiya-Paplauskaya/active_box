@@ -11,6 +11,7 @@ $text-footer-color: #808080;
 
 $swiper-color: #7E5D6F;
 $testimonial-color: #5C3249;
+$banner-color: #252B49;
 $footer-top-color: #353C65;
 $footer-bottom-color: #2C3154;
 $border-color: #C6CBCD;
@@ -176,7 +177,7 @@ $primary-font: "Raleway", sans-serif;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: rgba($color: #252B49, $alpha: 0.8);
+		background-color: rgba($color: $banner-color, $alpha: 0.8);
 	}
 	&__title{
 		position: relative;
