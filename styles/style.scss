@@ -504,6 +504,7 @@ $primary-font: "Raleway", sans-serif;
 }
 .testimonial{
 	margin-bottom: 122px;
+	padding-bottom: 45px;
 
 	@media(max-width: 1024px){
 		margin-bottom: 77px;
@@ -514,8 +515,8 @@ $primary-font: "Raleway", sans-serif;
 
 	&__contant{
 		display: grid;
-		grid-template-columns: auto 1fr;
-		align-items: center;
+		grid-template-columns: 49% 51%;
+
 
 		@media(max-width: 1024px){
 			grid-template-columns: 46% 54%; //как тут установить
@@ -541,7 +542,8 @@ $primary-font: "Raleway", sans-serif;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		padding: 133px 170px 122px 129px;
+		align-items: center;
+		padding: 20px 50px 10px 10px;
 
 		@media(max-width: 1024px){
 			padding: 47px 109px 110px 83px;
@@ -553,9 +555,11 @@ $primary-font: "Raleway", sans-serif;
 	&__quote{
 		@include font(36px, 49px, $primary-color);
 		font-family: "Cardo", serif;
-		padding-bottom: 24px;
+		margin-bottom: 24px;
 		font-style: italic;
 		text-transform: capitalize;
+		max-width: 471px;
+		width: 100%;
 
 		@media(max-width: 1024px){
 			@include font(24px, 32px, $primary-color);
@@ -573,6 +577,8 @@ $primary-font: "Raleway", sans-serif;
 		@include font(13px, 15px, $primary-color);
 		text-transform: uppercase;
 		font-weight: 700;
+		max-width: 471px;
+		width: 100%;
 
 		@media(max-width: 1024px){
 			@include font(12px, 14px, $primary-color);
@@ -582,25 +588,26 @@ $primary-font: "Raleway", sans-serif;
 			padding: 3px;
 		}
 	}
-	&__swiper-container{
-		margin-top: 31px;
-		max-width: 170px;
-		width: 100%;
-	}
-	&__swiper-wrapper{
-		display: flex;
-		justify-content: center; //не центрирует
-		align-items: center;
-		gap: 25px;
-	}
-	&__swiper-slide{
+	.swiper-pagination-bullet{
 		width: 14px;
 		height: 14px;
 		border: 1px solid #7E5D6F;
 		border-radius: 50%;
+		background-color: transparent;
+		opacity: 1;
 	}
-	&__swiper-slide:active{
+	.swiper-pagination-bullet-active{
 		background-color: #7E5D6F;
+	}
+
+	.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+		bottom: 0;
+		display: flex;
+		justify-content: center;
+		column-gap: 25px;
+	}
+	.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+		margin: 0;
 	}
 }
 .download{

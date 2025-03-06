@@ -632,6 +632,7 @@
 
 .testimonial {
   margin-bottom: 122px;
+  padding-bottom: 45px;
 }
 @media (max-width: 1024px) {
   .testimonial {
@@ -645,8 +646,7 @@
 }
 .testimonial__contant {
   display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
+  grid-template-columns: 49% 51%;
 }
 @media (max-width: 1024px) {
   .testimonial__contant {
@@ -676,7 +676,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 133px 170px 122px 129px;
+  align-items: center;
+  padding: 20px 50px 10px 10px;
 }
 @media (max-width: 1024px) {
   .testimonial__text {
@@ -694,9 +695,11 @@
   color: #fff;
   font-family: "Raleway", sans-serif;
   font-family: "Cardo", serif;
-  padding-bottom: 24px;
+  margin-bottom: 24px;
   font-style: italic;
   text-transform: capitalize;
+  max-width: 471px;
+  width: 100%;
 }
 @media (max-width: 1024px) {
   .testimonial__quote {
@@ -726,6 +729,8 @@
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
+  max-width: 471px;
+  width: 100%;
 }
 @media (max-width: 1024px) {
   .testimonial__author {
@@ -744,23 +749,24 @@
     padding: 3px;
   }
 }
-.testimonial__swiper-container {
-  margin-top: 31px;
-  max-width: 170px;
-  width: 100%;
-}
-.testimonial__swiper-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-}
-.testimonial__swiper-slide {
+.testimonial .swiper-pagination-bullet {
   width: 14px;
   height: 14px;
   border: 1px solid #7E5D6F;
   border-radius: 50%;
+  background-color: transparent;
+  opacity: 1;
 }
-.testimonial__swiper-slide:active {
+.testimonial .swiper-pagination-bullet-active {
   background-color: #7E5D6F;
+}
+.testimonial .swiper-horizontal > .swiper-pagination-bullets, .testimonial .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+}
+.testimonial .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .testimonial .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
