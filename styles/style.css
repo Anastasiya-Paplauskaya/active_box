@@ -4,6 +4,29 @@
   box-sizing: border-box;
 }
 
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
 .container {
   max-width: 1170px;
   width: 100%;
@@ -24,6 +47,8 @@
   position: relative;
   padding: 38px 0 36px;
   z-index: 2;
+  background-color: #252B49;
+  opacity: 0.8;
 }
 @media (max-width: 320px) {
   .header {
@@ -219,6 +244,7 @@
 }
 .banner__button:hover {
   background-color: #E71414;
+  animation: heartbeat 0.3s linear;
 }
 .banner__button:active {
   background-color: #FF4343;
@@ -638,7 +664,7 @@
     margin-bottom: 77px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 767px) {
   .testimonial {
     margin-bottom: 34px;
   }

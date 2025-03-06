@@ -48,6 +48,35 @@ $primary-font: "Raleway", sans-serif;
 	font-weight: 700;
 }
 
+@keyframes heartbeat {
+	from {
+			  transform: scale(1);
+	 
+			  transform-origin: center center;
+	  
+			  animation-timing-function: ease-out;
+	}
+	10% {
+		transform: scale(0.91);
+		animation-timing-function: ease-in;
+	}
+	17% {
+			  transform: scale(0.98);
+			  animation-timing-function: ease-out;
+	}
+	33% {
+	
+			  transform: scale(0.87);
+
+			  animation-timing-function: ease-in;
+	}
+	45% {
+
+	transform: scale(1);
+	animation-timing-function: ease-out;
+	}
+  }
+  
 
 .container{
     max-width: 1170px;
@@ -66,6 +95,8 @@ $primary-font: "Raleway", sans-serif;
 	position: relative;
 	padding: 38px 0 36px;
 	z-index: 2;
+	background-color: $banner-color;
+	opacity: 0.8;
 
 	@media(max-width: 320px){
 		padding: 21px 0 0;
@@ -221,10 +252,12 @@ $primary-font: "Raleway", sans-serif;
 
 		&:hover{
 			background-color: $active-color;
+			animation: heartbeat 0.3s linear;
 		}
 		&:active{
 			background-color: $button-color;
 			box-shadow: 3px 3px 20px 5px rgba(255, 67, 67, 0.8);
+			
 		}
 		@media(max-width: 1024px){
 			max-width: 314px;
@@ -525,7 +558,7 @@ $primary-font: "Raleway", sans-serif;
 	@media(max-width: 1024px){
 		margin-bottom: 77px;
 	}
-	@media(max-width: 320px){
+	@media(max-width: 767px){ //zmienić wszystko
 		margin-bottom: 34px;
 	}
 
