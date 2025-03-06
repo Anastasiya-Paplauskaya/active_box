@@ -50,16 +50,12 @@ $primary-font: "Raleway", sans-serif;
 
 
 .container{
-    max-width: 1170px;
+    max-width: 1210px;
 	width: 100%;
     margin: 0 auto;
+	padding: 0 20px;
 
-	@media(max-width: 1024px){
-		max-width: 984px;
-	}
-	@media(max-width: 320px){
-		max-width: 280px;
-	}
+	
 }
 
 .header{
@@ -694,98 +690,42 @@ $primary-font: "Raleway", sans-serif;
 			padding-bottom: 43px;
 			padding-top: 46px;
 		}
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			padding-bottom: 33px;
 			padding-top: 34px;
 		}
 	}
 	&__columns{
-		display: flex;
-		align-items: flex-start;
-		justify-content: center;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
 		gap: 30px;
 
 		@media(max-width: 1024px){
 			gap: 20px;
 		}
-		@media(max-width: 320px){
-			display: block;
+		@media(max-width: 767px){
+			grid-template-columns: 1fr;
+        	row-gap: 69px;
 		}
 	}
 	&__column{
 		text-align: center;
-		max-width: 370px;
-		width: 100%;
+		
+	}
 
-		@media(max-width: 1024px){
-			max-width: 315px;
-		}
-		@media(max-width: 320px){
-			max-width: 280px;
-		}
+	&__title{
+		@include title__footer;
+		@include font(18px, 21px, $primary-color);
+		margin-bottom: 28px;
 
-		&--location, &--about, &--social{
-			.footer__title{
-				@include title__footer;
-				@include font(18px, 21px, $primary-color);
-			}
-		}
-		&--location, &--about{
-			.footer__title{
-				margin-bottom: 28px;
-			}
-		}
-		&--social{
-			.footer__title{
-				margin-bottom: 49px;
-			}
+		@media (max-width: 1024px){
+			@include font(14px, 16px, $primary-color);
+			margin-bottom: 17px;
 		}
 
-		@media (max-width: 1024px) { 
-			&--location, &--about, &--social {
-				.footer__title {
-				@include font(14px, 16px, $primary-color);
-				}
-			}
-			&--location{
-				.footer__title {
-					margin-bottom: 17px;
-				}
-			}
-			&--social{
-				.footer__title {
-					margin-bottom: 32px;
-				}
-			}
-			&--about{
-				.footer__title {
-					margin-bottom: 15px;
-				}
-			}
-		}
-		@media (max-width: 320px) { 
-			&--location, &--about, &--social {
-				.footer__title {
-				@include font(14px, 16px, $primary-color);
-				}
-			}
-			&--location{
-				.footer__title {
-					margin-bottom: 34px;
-				}
-				margin-bottom: 69px;
-			}
-			&--social{
-				.footer__title {
-					margin-bottom: 37px;
-				}
-				margin-bottom: 59px;
-			}
-			&--about{
-				.footer__title {
-					margin-bottom: 38px;
-				}
-			}
+		@media (max-width: 767px){
+			@include font(14px, 16px, $primary-color);
+			margin-bottom: 34px;
 		}
 	}
 	&__text{
@@ -795,7 +735,7 @@ $primary-font: "Raleway", sans-serif;
 		@media(max-width: 1024px){
 			@include font(14px, 16px, $primary-color);
 		}
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			@include font(14px, 16px, $primary-color);
 		}
 	}
@@ -803,28 +743,28 @@ $primary-font: "Raleway", sans-serif;
 		display: flex;
 		justify-content: center;
 		column-gap: 26px;
+		margin-top: 48px;
 
 		@media(max-width: 1024px){
 			column-gap: 23px;
+			margin-top: 32px;
 		}
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			column-gap: 16px;
+			margin-top: 59px;
 		}
 	}
 	&__social-link{
-		text-align: center;
 		border: 1px solid $border-color;
-		max-width: 39px;
-		width: 100%;
-		padding: 8px 8px;
+		width: 38px;
+		height: 38px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
 		@media(max-width: 1024px){
-			max-width: 33px;
-			padding: 5px 8px;
-		}
-		@media(max-width: 320px){
-			max-width: 33px;
-			padding: 5px 8px;
+			width: 33px;
+			height: 33px;
 		}
 	}
 	&__bottom{
@@ -836,26 +776,30 @@ $primary-font: "Raleway", sans-serif;
 			padding-bottom: 14px;
 			padding-top: 14px;
 		}
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			padding-bottom: 29px;
 			padding-top: 29px;
 		}
+
+		&-container{
+			max-width: 410px;
+
+			@media(max-width: 1024px){
+				max-width: 340px;
+			}
+		}
 	}
+	
 	&__copyright{
 		@include font(18px, 21px, $text-footer-color);
-		max-width: 370px;
-		width: 100%;
 		text-align: center;
-		margin: auto;
 		text-transform: capitalize;	
 
 		@media(max-width: 1024px){
 			@include font(14px, 16px, $text-footer-color);
-			max-width: 314px;
 		}
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			@include font(14px, 16px, $text-footer-color);
-			max-width: 280px;
 		}
 	}
 	&__author{
@@ -864,7 +808,7 @@ $primary-font: "Raleway", sans-serif;
 		@media(max-width: 1024px){
 			@include font(14px, 16px, $primary-color);
 		}
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			@include font(14px, 16px, $primary-color);
 		}
 	}
