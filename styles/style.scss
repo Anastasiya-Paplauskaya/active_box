@@ -699,6 +699,7 @@ $primary-font: "Raleway", sans-serif;
 	&__button{
 		@include font(24px, 28px, $primary-color);
 		@include button();
+		transition: all .3s linear;
 
 		&:hover{
 			background-color: $active-color;

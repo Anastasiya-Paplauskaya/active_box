@@ -875,6 +875,7 @@
   display: block;
   margin: 0 auto;
   border: none;
+  transition: all 0.3s linear;
 }
 .download__button:hover {
   background-color: #E71414;
