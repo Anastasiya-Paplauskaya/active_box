@@ -5,19 +5,10 @@
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1210px;
   width: 100%;
   margin: 0 auto;
-}
-@media (max-width: 1024px) {
-  .container {
-    max-width: 984px;
-  }
-}
-@media (max-width: 320px) {
-  .container {
-    max-width: 280px;
-  }
+  padding: 0 20px;
 }
 
 .header {
@@ -773,7 +764,7 @@
     margin-bottom: 78px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 767px) {
   .download {
     margin-bottom: 45px;
   }
@@ -794,17 +785,16 @@
     line-height: 28px;
     color: #000000;
     font-family: "Raleway", sans-serif;
-    margin-bottom: 5px;
-    padding: 19px 5px;
+    margin-bottom: 24px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 767px) {
   .download__title {
     font-size: 18px;
     line-height: 21px;
     color: #000000;
     font-family: "Raleway", sans-serif;
-    margin-bottom: 3px;
+    margin-bottom: 22px;
   }
 }
 .download__subtitle {
@@ -826,7 +816,7 @@
     margin-bottom: 43px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 767px) {
   .download__subtitle {
     font-size: 13px;
     line-height: 15px;
@@ -858,11 +848,12 @@
     font-family: "Raleway", sans-serif;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 767px) {
   .download__button {
     font-size: 18px;
     line-height: 21px;
     color: #fff;
     font-family: "Raleway", sans-serif;
+    max-width: 280px;
   }
 }/*# sourceMappingURL=style.css.map */
