@@ -17,59 +17,8 @@ $primary-font: "Raleway", sans-serif;
 }
 
 .container{
-    max-width: 1170px;
+    max-width: 1210px;
 	width: 100%;
     margin: 0 auto;
-
-	@media(max-width: 1024px){
-		max-width: 984px;
-	}
-}
-
-header .container{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-.header{
-	padding: 38px 0 36px;
-	background-color: black;
-
-	.navigation__icon{
-		display: none;
-
-		@media(max-width: 320px){
-            display: block;
-			cursor: pointer;
-        }
-	}
-
-	&__items{
-		display: flex;
-		justify-content: flex-end;
-		list-style: none;
-		margin-left: auto;
-	}
-
-	&__item{
-		min-width: 134px;
-		padding: 0 5px;
-		text-align: center;
-
-		@media(max-width: 1024px){
-            min-width: 112px;
-        }
-
-		@media(max-width: 320px){
-            flex-basis: 100%;
-        }
-	}
-
-	&__link{
-		text-decoration: none;
-		@include font(13px, 15px, $primary-color);
-		font-weight: 700;
-		text-transform: uppercase;
-	}
+	padding: 0 20px;
 }
