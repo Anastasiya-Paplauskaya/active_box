@@ -509,7 +509,7 @@ $primary-font: "Raleway", sans-serif;
 	@media(max-width: 1024px){
 		margin-bottom: 77px;
 	}
-	@media(max-width: 320px){
+	@media(max-width: 767px){
 		margin-bottom: 34px;
 	}
 
@@ -519,9 +519,9 @@ $primary-font: "Raleway", sans-serif;
 
 
 		@media(max-width: 1024px){
-			grid-template-columns: 46% 54%; //как тут установить
+			grid-template-columns: 49% 51%;
 		}
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -548,9 +548,9 @@ $primary-font: "Raleway", sans-serif;
 		@media(max-width: 1024px){
 			padding: 47px 109px 110px 83px;
 		}
-		@media(max-width: 320px){
+		/*@media(max-width: 767px){
 			padding: 23px 25px 95px 20px;
-		}
+		}*/
 	}
 	&__quote{
 		@include font(36px, 49px, $primary-color);
@@ -566,7 +566,7 @@ $primary-font: "Raleway", sans-serif;
 			font-family: "Cardo", serif;
 			padding-bottom: 24px;
 		}
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			@include font(24px, 32px, $primary-color);
 			font-family: "Cardo", serif;
 			padding-bottom: 23px;
@@ -583,7 +583,7 @@ $primary-font: "Raleway", sans-serif;
 		@media(max-width: 1024px){
 			@include font(12px, 14px, $primary-color);
 		}
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			@include font(12px, 14px, $primary-color);
 			padding: 3px;
 		}
