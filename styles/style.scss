@@ -226,7 +226,7 @@ $primary-font: "Raleway", sans-serif;
 			margin-top: 106px;
 			padding-bottom: 32px;
 		}
-	}
+}
 	&__subtitle{
 		position: relative;
 		@include font(24px, 28px, $primary-color);
@@ -696,6 +696,7 @@ $primary-font: "Raleway", sans-serif;
 	&__button{
 		@include font(24px, 28px, $primary-color);
 		@include button();
+		transition: all .3s linear;
 
 		&:hover{
 			background-color: $active-color;
