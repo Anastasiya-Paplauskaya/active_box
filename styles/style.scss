@@ -489,6 +489,7 @@ $primary-font: "Raleway", sans-serif;
 			@include font(14px, 16px,  $text-color);
 		}
 	}
+	}
 	.social-block{
 		display: flex;
 		column-gap: 5px;
@@ -496,9 +497,9 @@ $primary-font: "Raleway", sans-serif;
 		@media(max-width: 767px){
 			column-gap: 6px;
 		}
-
-		&-block__link{
-			border: 1px solid #C6CBCD;
+	}
+	.social-block__link{
+		border: 1px solid $border-color;
 		width: 39px;
 		height: 39px;
 		display: flex;
@@ -510,8 +511,6 @@ $primary-font: "Raleway", sans-serif;
 			height: 33px;
 		}
 		}
-	}
-}
 .testimonial{
 	margin-bottom: 122px;
 	padding-bottom: 45px;
