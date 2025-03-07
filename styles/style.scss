@@ -7,9 +7,14 @@ $hover-color: #BABBC5;
 $title-color: #2D3033;
 $text-color: #6C7279; 
 $text-color-2: #000000;
+$text-footer-color: #808080;
 
 $swiper-color: #7E5D6F;
 $testimonial-color: #5C3249;
+$banner-color: #252B49;
+$footer-top-color: #353C65;
+$footer-bottom-color: #2C3154;
+$border-color: #C6CBCD;
 
 
 $primary-font: "Raleway", sans-serif; 
@@ -38,6 +43,10 @@ $primary-font: "Raleway", sans-serif;
 	display: block;
 	margin: 0 auto;
 	border: none;
+	}
+@mixin title__footer(){
+	text-transform: uppercase;
+	font-weight: 700;
 }
 
 
@@ -189,7 +198,7 @@ $primary-font: "Raleway", sans-serif;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: rgba($color: #252B49, $alpha: 0.8);
+		background-color: rgba($color: $banner-color, $alpha: 0.8);
 	}
 	&__title{
 		@include font(64px, 75px, $primary-color);
@@ -650,6 +659,15 @@ $primary-font: "Raleway", sans-serif;
 	&__button{
 		@include font(24px, 28px, $primary-color);
 		@include button();
+
+		&:hover{
+			background-color: $active-color;
+		}
+		&:active{
+			background-color: $button-color;
+			box-shadow: 3px 3px 20px 5px rgba(255, 67, 67, 0.8);
+		}
+
 		@media(max-width: 1024px){
 			@include font(18px, 21px, $primary-color);
 		}
@@ -659,3 +677,189 @@ $primary-font: "Raleway", sans-serif;
 		}
 	}
 } 
+.footer{
+	&__top{
+		padding-bottom: 67px;
+		padding-top: 71px;
+		background-color: $footer-top-color;
+		
+
+		@media(max-width: 1024px){
+			padding-bottom: 43px;
+			padding-top: 46px;
+		}
+		@media(max-width: 320px){
+			padding-bottom: 33px;
+			padding-top: 34px;
+		}
+	}
+	&__columns{
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 30px;
+
+		@media(max-width: 1024px){
+			gap: 20px;
+		}
+		@media(max-width: 320px){
+			display: block;
+		}
+	}
+	&__column{
+		text-align: center;
+		max-width: 370px;
+		width: 100%;
+
+		@media(max-width: 1024px){
+			max-width: 315px;
+		}
+		@media(max-width: 320px){
+			max-width: 280px;
+		}
+
+		&--location, &--about, &--social{
+			.footer__title{
+				@include title__footer;
+				@include font(18px, 21px, $primary-color);
+			}
+		}
+		&--location, &--about{
+			.footer__title{
+				margin-bottom: 28px;
+			}
+		}
+		&--social{
+			.footer__title{
+				margin-bottom: 49px;
+			}
+		}
+
+		@media (max-width: 1024px) { 
+			&--location, &--about, &--social {
+				.footer__title {
+				@include font(14px, 16px, $primary-color);
+				}
+			}
+			&--location{
+				.footer__title {
+					margin-bottom: 17px;
+				}
+			}
+			&--social{
+				.footer__title {
+					margin-bottom: 32px;
+				}
+			}
+			&--about{
+				.footer__title {
+					margin-bottom: 15px;
+				}
+			}
+		}
+		@media (max-width: 320px) { 
+			&--location, &--about, &--social {
+				.footer__title {
+				@include font(14px, 16px, $primary-color);
+				}
+			}
+			&--location{
+				.footer__title {
+					margin-bottom: 34px;
+				}
+				margin-bottom: 69px;
+			}
+			&--social{
+				.footer__title {
+					margin-bottom: 37px;
+				}
+				margin-bottom: 59px;
+			}
+			&--about{
+				.footer__title {
+					margin-bottom: 38px;
+				}
+			}
+		}
+	}
+	&__text{
+		@include font(18px, 21px, $primary-color);
+		text-transform: capitalize;
+
+		@media(max-width: 1024px){
+			@include font(14px, 16px, $primary-color);
+		}
+		@media(max-width: 320px){
+			@include font(14px, 16px, $primary-color);
+		}
+	}
+	&__social{
+		display: flex;
+		justify-content: center;
+		column-gap: 26px;
+
+		@media(max-width: 1024px){
+			column-gap: 23px;
+		}
+		@media(max-width: 320px){
+			column-gap: 16px;
+		}
+	}
+	&__social-link{
+		text-align: center;
+		border: 1px solid $border-color;
+		max-width: 39px;
+		width: 100%;
+		padding: 8px 8px;
+
+		@media(max-width: 1024px){
+			max-width: 33px;
+			padding: 5px 8px;
+		}
+		@media(max-width: 320px){
+			max-width: 33px;
+			padding: 5px 8px;
+		}
+	}
+	&__bottom{
+		padding-bottom: 24px;
+		padding-top: 24px;
+		background-color: $footer-bottom-color;
+
+		@media(max-width: 1024px){
+			padding-bottom: 14px;
+			padding-top: 14px;
+		}
+		@media(max-width: 320px){
+			padding-bottom: 29px;
+			padding-top: 29px;
+		}
+	}
+	&__copyright{
+		@include font(18px, 21px, $text-footer-color);
+		max-width: 370px;
+		width: 100%;
+		text-align: center;
+		margin: auto;
+		text-transform: capitalize;	
+
+		@media(max-width: 1024px){
+			@include font(14px, 16px, $text-footer-color);
+			max-width: 314px;
+		}
+		@media(max-width: 320px){
+			@include font(14px, 16px, $text-footer-color);
+			max-width: 280px;
+		}
+	}
+	&__author{
+		@include font(18px, 21px, $primary-color);
+
+		@media(max-width: 1024px){
+			@include font(14px, 16px, $primary-color);
+		}
+		@media(max-width: 320px){
+			@include font(14px, 16px, $primary-color);
+		}
+	}
+}
