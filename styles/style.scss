@@ -88,6 +88,10 @@ $primary-font: "Raleway", sans-serif;
             min-width: 112px;
         }
 
+		@media(max-width: 790px){
+            min-width: 100px;
+        }
+
 		@media(max-width: 767px){
 			display: none;
 		}
@@ -133,10 +137,6 @@ $primary-font: "Raleway", sans-serif;
 		bottom: 0;
 		left: 0;
 		transform: translateY(34px);
-
-		@media(max-width: 1024px){
-			width: 984px;
-		}
 		@media(max-width: 767px){
 			display: none;
 		}
@@ -150,6 +150,15 @@ $primary-font: "Raleway", sans-serif;
 	background-repeat: no-repeat;
 	padding: 230px 0 120px;
 	margin-bottom: 116px;
+
+	@media(max-width: 1024px){
+		padding: 257px 0 126px;
+	}
+
+	@media(max-width: 767px){
+		padding: 106px 0 52px;
+	}
+
 
 	.container{
 		position: relative;
@@ -173,13 +182,11 @@ $primary-font: "Raleway", sans-serif;
 
 		@media(max-width: 1024px){
 			@include font(48px, 56px, $primary-color);
-			margin-top: 257px;
-			padding-bottom: 62px;
+			margin-bottom: 62px;
 		}
 		@media(max-width: 767px){
 			@include font(36px, 42px, $primary-color);
-			margin-top: 106px;
-			padding-bottom: 32px;
+			margin-bottom: 32px;
 		}
 	}
 	&__subtitle{
@@ -262,17 +269,17 @@ $primary-font: "Raleway", sans-serif;
 		justify-content: center;
 		width: 100px;
 		height: 100px;
-		margin: auto 134px 51px;
+		margin: 0 auto  51px;
 
 		@media(max-width: 1024px){
 			width: 85px;
 			height: 84px;
-			margin: auto 115px 24px;
+			margin:0  auto  43px;
 		}
 		@media(max-width: 767px){
 			width: 75px;
 			height: 74px;
-			margin: auto 102px 21px;
+			margin: 0  auto  21px;
 		}
 	}
 	&__title{
@@ -283,13 +290,11 @@ $primary-font: "Raleway", sans-serif;
 
 		@media(max-width: 1024px){
 			@include font(18px, 21px, $title-color);
-			padding: 19px 20px;
-			margin-bottom: 4px;
+			margin-bottom: 23px;
 		}
 		@media(max-width: 767px){
 			@include font(18px, 21px, $title-color);
-			padding: 16px 20px;
-			margin-bottom: 0;
+			margin-bottom: 16px;
 		}
 	}
 	&__text{
@@ -319,10 +324,6 @@ $primary-font: "Raleway", sans-serif;
 		aspect-ratio: 1 / 0.91;
 		position: relative;
 		overflow: hidden;
-
-		
-
-	
 	}
 	&__img{ 
 		width: 100%;
@@ -362,13 +363,10 @@ $primary-font: "Raleway", sans-serif;
 
 		@media(max-width: 1024px){
 			@include font(18px, 21px, $primary-color);
-			margin-top: 84px;
-			padding: 0;
 		}
 		@media(max-width: 767px){
 			@include font(18px, 21px, $primary-color);
-			margin-top: 46px;
-			padding: 0;
+
 		}
 	}
 	&__text{
@@ -382,8 +380,7 @@ $primary-font: "Raleway", sans-serif;
 		}
 		@media(max-width: 767px){
 			@include font(14px, 16px, $primary-color);
-			margin-top: 0;
-			margin-bottom: 56px;
+			margin-top: 10px;
 		}
 	}
 }
@@ -407,20 +404,21 @@ $primary-font: "Raleway", sans-serif;
 			column-gap: 25px;
 		}
 		@media(max-width: 767px){
-			display: block;
+			grid-template-columns: 1fr;
+			row-gap: 56px
 		}
 	}
 
 	&__avatar-box{
-		    margin-bottom: 30px;
+		margin-bottom: 30px;
 		aspect-ratio: 1 / 1;
 		overflow: hidden;
 
 		@media(max-width: 1024px){
-			padding-bottom: 27px;
+			margin-bottom: 27px;
 		}
 		@media(max-width: 767px){
-			padding-bottom: 25px;
+			margin-bottom: 25px;
 		}
 	}
 	&__avatar{
@@ -432,10 +430,10 @@ $primary-font: "Raleway", sans-serif;
 		margin-bottom: 38px;
 
 		@media(max-width: 1024px){
-			padding-bottom: 39px;
+			margin-bottom: 39px;
 		}
 		@media(max-width: 767px){
-			padding-bottom: 55px;
+			margin-bottom: 55px;
 		}
 	}
 	&__name{
@@ -457,11 +455,11 @@ $primary-font: "Raleway", sans-serif;
 
 		@media(max-width: 1024px){
 			@include font(14px, 16px,  $button-color);
-			padding-bottom: 22px;
+			margin-bottom: 22px;
 		}
 		@media(max-width: 767px){
 			@include font(14px, 16px,  $button-color);
-			padding-bottom: 36px;
+			margin-bottom: 36px;
 		}
 	}
 	&__text{
@@ -480,7 +478,6 @@ $primary-font: "Raleway", sans-serif;
 
 		@media(max-width: 767px){
 			column-gap: 6px;
-			padding-bottom: 49px;
 		}
 	}
 	.social__link{
@@ -492,8 +489,8 @@ $primary-font: "Raleway", sans-serif;
 		justify-content: center;
 
 		@media(max-width: 1024px){
-			max-width: 33px;
-			padding: 5px 5px;
+			width: 33px;
+			height: 33px;
 		}
 	}
 }
