@@ -753,7 +753,49 @@
 .testimonial .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .testimonial .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0;
 }
-.testimonial__subtitle {
+
+.download {
+  margin-bottom: 114px;
+}
+@media (max-width: 1024px) {
+  .download {
+    margin-bottom: 78px;
+  }
+}
+@media (max-width: 767px) {
+  .download {
+    margin-bottom: 45px;
+  }
+}
+.download__title {
+  font-size: 30px;
+  line-height: 35px;
+  color: #000000;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 22px;
+}
+@media (max-width: 1024px) {
+  .download__title {
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .download__title {
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 22px;
+  }
+}
+.download__subtitle {
   font-size: 18px;
   line-height: 21px;
   color: #000000;
@@ -764,7 +806,7 @@
   margin-bottom: 48px;
 }
 @media (max-width: 1024px) {
-  .testimonial__subtitle {
+  .download__subtitle {
     font-size: 14px;
     line-height: 16px;
     color: #000000;
@@ -773,7 +815,7 @@
   }
 }
 @media (max-width: 767px) {
-  .testimonial__subtitle {
+  .download__subtitle {
     font-size: 13px;
     line-height: 15px;
     color: #000000;
@@ -781,7 +823,7 @@
     margin-bottom: 11px;
   }
 }
-.testimonial__button {
+.download__button {
   font-size: 24px;
   line-height: 28px;
   color: #fff;
@@ -797,7 +839,7 @@
   border: none;
 }
 @media (max-width: 1024px) {
-  .testimonial__button {
+  .download__button {
     font-size: 18px;
     line-height: 21px;
     color: #fff;
@@ -805,7 +847,7 @@
   }
 }
 @media (max-width: 767px) {
-  .testimonial__button {
+  .download__button {
     font-size: 18px;
     line-height: 21px;
     color: #fff;
