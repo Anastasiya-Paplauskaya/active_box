@@ -1,15 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="styles/style.css">
-	<title>Active box</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
 
-</body>
+    <title>Active box</title>
+  </head>
+  <body>
+    <div class="testimonial swiper">
+      <div class="swiper-wrapper">
+        <div class="testimonial__contant swiper-slide">
+          <div class="testimonial__wrapper-image">
+            <img
+              class="testimonial__image"
+              src="media/testimonial.png"
+              alt="People discussing"
+            />
+          </div>
+          <div class="testimonial__text">
+            <blockquote class="testimonial__quote">
+              “Integer posuere erat a ante venenatis dapibus posuere velit
+              aliquet. Donec sed odio dui. Aenean eu leo quam...” 1
+            </blockquote>
+            <p class="testimonial__author">
+              Susan Sims, Interaction Designer at XYZ
+            </p>
+          </div>
+        </div>
+        <div class="testimonial__contant swiper-slide">
+          <div class="testimonial__wrapper-image">
+            <img
+              class="testimonial__image"
+              src="media/testimonial.png"
+              alt="People discussing"
+            />
+          </div>
+          <div class="testimonial__text">
+            <blockquote class="testimonial__quote">
+              “Integer posuere erat a ante venenatis dapibus posuere velit
+              aliquet. Donec sed odio dui. Aenean eu leo quam...” 2
+            </blockquote>
+            <p class="testimonial__author">
+              Susan Sims, Interaction Designer at XYZ
+            </p>
+          </div>
+        </div>
+        <div class="testimonial__contant swiper-slide">
+          <div class="testimonial__wrapper-image">
+            <img
+              class="testimonial__image"
+              src="media/testimonial.png"
+              alt="People discussing"
+            />
+          </div>
+          <div class="testimonial__text">
+            <blockquote class="testimonial__quote">
+              “Integer posuere erat a ante venenatis dapibus posuere velit
+              aliquet. Donec sed odio dui. Aenean eu leo quam...” 3
+            </blockquote>
+            <p class="testimonial__author">
+              Susan Sims, Interaction Designer at XYZ
+            </p>
+          </div>
+        </div>
+        <div class="testimonial__contant swiper-slide">
+          <div class="testimonial__wrapper-image">
+            <img
+              class="testimonial__image"
+              src="media/testimonial.png"
+              alt="People discussing"
+            />
+          </div>
+          <div class="testimonial__text">
+            <blockquote class="testimonial__quote">
+              “Integer posuere erat a ante venenatis dapibus posuere velit
+              aliquet. Donec sed odio dui. Aenean eu leo quam...” 4
+            </blockquote>
+            <p class="testimonial__author">
+              Susan Sims, Interaction Designer at XYZ
+            </p>
+          </div>
+        </div>
+        <div class="testimonial__contant swiper-slide">
+          <div class="testimonial__wrapper-image">
+            <img
+              class="testimonial__image"
+              src="media/testimonial.png"
+              alt="People discussing"
+            />
+          </div>
+          <div class="testimonial__text">
+            <blockquote class="testimonial__quote">
+              “Integer posuere erat a ante venenatis dapibus posuere velit
+              aliquet. Donec sed odio dui. Aenean eu leo quam...” 5
+            </blockquote>
+            <p class="testimonial__author">
+              Susan Sims, Interaction Designer at XYZ
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial__swiper-pagination swiper-pagination"></div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper('.testimonial', {
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    </script>
+  </body>
 </html>
