@@ -39,8 +39,8 @@ $primary-font: "Raleway", sans-serif;
   	padding: 38px 0 36px;
   	z-index: 1000;
 
-	@media(max-width: 320px){
-		padding: 21px 0 0;
+	@media(max-width: 767px){
+		padding: 21px 0 20px;
 	}
 
 	&__container{
@@ -53,7 +53,7 @@ $primary-font: "Raleway", sans-serif;
 	&__logo{
 		display: flex;
         
-		@media(max-width: 320px){
+		@media(max-width: 767px){
             width: 103px;
 
 			svg {
@@ -66,7 +66,7 @@ $primary-font: "Raleway", sans-serif;
 	.navigation__icon{
 		display: none;
 
-		@media(max-width: 320px){
+		@media(max-width: 767px){
             display: block;
 			cursor: pointer;
         }
@@ -88,7 +88,7 @@ $primary-font: "Raleway", sans-serif;
             min-width: 112px;
         }
 
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			display: none;
 		}
 	}
@@ -114,7 +114,7 @@ $primary-font: "Raleway", sans-serif;
 		}
 
 		&:hover::before{
-			background-color: red;
+			background-color: $hover-color;
 		}
 
 		&:active::before{
@@ -127,7 +127,7 @@ $primary-font: "Raleway", sans-serif;
 	}
 
 	.line{
-		border: 1px solid #BABBC5;
+		border: 1px solid $hover-color;
 		width: 100%;
 		position: relative;
 		bottom: 0;
@@ -137,7 +137,7 @@ $primary-font: "Raleway", sans-serif;
 		@media(max-width: 1024px){
 			width: 984px;
 		}
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			display: none;
 		}
 	}
@@ -176,7 +176,7 @@ $primary-font: "Raleway", sans-serif;
 			margin-top: 257px;
 			padding-bottom: 62px;
 		}
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			@include font(36px, 42px, $primary-color);
 			margin-top: 106px;
 			padding-bottom: 32px;
@@ -192,7 +192,7 @@ $primary-font: "Raleway", sans-serif;
 			@include font(18px, 21px, $primary-color);
 			margin: 0 auto  89px;
 		}
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			@include font(14px, 16px, $primary-color);
 			margin: 0 auto 49px;
 		}
@@ -219,7 +219,7 @@ $primary-font: "Raleway", sans-serif;
 		@media(max-width: 1024px){
 			max-width: 314px;
 		}
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			max-width: 280px;
 			padding: 14px 10px;
 		}
@@ -231,7 +231,7 @@ $primary-font: "Raleway", sans-serif;
 	@media(max-width: 1024px){
 		margin-bottom: 80px;
 	}
-	@media(max-width: 320px){
+	@media(max-width: 767px){
 		margin-bottom: 35px;
 	}
 
@@ -244,14 +244,14 @@ $primary-font: "Raleway", sans-serif;
 		@media(max-width: 1024px){
 			row-gap: 49px;
 		}
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			display: block;
 		}
 	}
 	&__item{
 		text-align: center;
 
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			margin-bottom: 41px;
 		}
 	}
@@ -269,7 +269,7 @@ $primary-font: "Raleway", sans-serif;
 			height: 84px;
 			margin: auto 115px 24px;
 		}
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			width: 75px;
 			height: 74px;
 			margin: auto 102px 21px;
@@ -286,7 +286,7 @@ $primary-font: "Raleway", sans-serif;
 			padding: 19px 20px;
 			margin-bottom: 4px;
 		}
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			@include font(18px, 21px, $title-color);
 			padding: 16px 20px;
 			margin-bottom: 0;
@@ -298,7 +298,7 @@ $primary-font: "Raleway", sans-serif;
 		@media(max-width: 1024px){
 			@include font(14px, 16px, $text-color);
 		}
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			@include font(14px, 16px, $text-color);
 		}
 	}
@@ -311,7 +311,7 @@ $primary-font: "Raleway", sans-serif;
 	margin-bottom: 114px;
 
 
-	@media(max-width: 320px){
+	@media(max-width: 767px){
 		grid-template-columns: repeat(2, 1fr);
 	}
 
@@ -324,7 +324,7 @@ $primary-font: "Raleway", sans-serif;
 
 	
 	}
-	&__img{ //высота не такая как в фигме
+	&__img{ 
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
@@ -365,7 +365,7 @@ $primary-font: "Raleway", sans-serif;
 			margin-top: 84px;
 			padding: 0;
 		}
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			@include font(18px, 21px, $primary-color);
 			margin-top: 46px;
 			padding: 0;
@@ -380,7 +380,7 @@ $primary-font: "Raleway", sans-serif;
 			@include font(14px, 16px, $primary-color);
 			margin-top: 22px;
 		}
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			@include font(14px, 16px, $primary-color);
 			margin-top: 0;
 			margin-bottom: 56px;
@@ -394,7 +394,7 @@ $primary-font: "Raleway", sans-serif;
 	@media(max-width: 1024px){
 		margin-bottom: 78px;
 	}
-	@media(max-width: 320px){
+	@media(max-width: 767px){
 		margin-bottom: 41px;
 	}
 
@@ -406,7 +406,7 @@ $primary-font: "Raleway", sans-serif;
 		@media(max-width: 1024px){
 			column-gap: 25px;
 		}
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			display: block;
 		}
 	}
@@ -419,7 +419,7 @@ $primary-font: "Raleway", sans-serif;
 		@media(max-width: 1024px){
 			padding-bottom: 27px;
 		}
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			padding-bottom: 25px;
 		}
 	}
@@ -434,7 +434,7 @@ $primary-font: "Raleway", sans-serif;
 		@media(max-width: 1024px){
 			padding-bottom: 39px;
 		}
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			padding-bottom: 55px;
 		}
 	}
@@ -446,7 +446,7 @@ $primary-font: "Raleway", sans-serif;
 		@media(max-width: 1024px){
 			@include font(18px, 21px, $title-color);
 		}
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			@include font(18px, 21px, $title-color);
 		}
 	}
@@ -459,7 +459,7 @@ $primary-font: "Raleway", sans-serif;
 			@include font(14px, 16px,  $button-color);
 			padding-bottom: 22px;
 		}
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			@include font(14px, 16px,  $button-color);
 			padding-bottom: 36px;
 		}
@@ -470,7 +470,7 @@ $primary-font: "Raleway", sans-serif;
 		@media(max-width: 1024px){
 			@include font(14px, 16px,  $text-color);
 		}
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			@include font(14px, 16px,  $text-color);
 		}
 	}
@@ -478,7 +478,7 @@ $primary-font: "Raleway", sans-serif;
 		display: flex;
 		column-gap: 5px;
 
-		@media(max-width: 320px){
+		@media(max-width: 767px){
 			column-gap: 6px;
 			padding-bottom: 49px;
 		}
