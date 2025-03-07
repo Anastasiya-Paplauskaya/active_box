@@ -621,12 +621,12 @@
 }
 @media (max-width: 1024px) {
   .testimonial {
-    margin-bottom: 77px;
+    margin-bottom: 95px;
   }
 }
 @media (max-width: 767px) {
   .testimonial {
-    margin-bottom: 34px;
+    margin-bottom: 65px;
   }
 }
 .testimonial__contant {
