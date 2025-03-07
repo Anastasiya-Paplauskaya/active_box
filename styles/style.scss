@@ -10,6 +10,7 @@ $text-color: #6C7279;
 $primary-font: "Raleway", sans-serif;
 
 
+
 *{
 	margin: 0;
 	padding: 0;
@@ -27,481 +28,9 @@ $primary-font: "Raleway", sans-serif;
     max-width: 1170px;
 	width: 100%;
     margin: 0 auto;
-
-	@media(max-width: 1024px){
-		max-width: 984px;
-	}
-	@media(max-width: 320px){
-		max-width: 280px;
-	}
 }
 
-.header{
-	position: relative;
-	padding: 38px 0 36px;
-	z-index: 2;
 
-	@media(max-width: 320px){
-		padding: 21px 0 0;
-	}
-
-	&__container{
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-
-	&__logo{
-		display: flex;
-        
-		@media(max-width: 320px){
-            width: 103px;
-
-			svg {
-                height: auto;
-        		max-height: 14px;
-        	}
-        }
-	}
-
-	.navigation__icon{
-		display: none;
-
-		@media(max-width: 320px){
-            display: block;
-			cursor: pointer;
-        }
-	}
-
-	&__items{
-		display: flex;
-		justify-content: flex-end;
-		list-style: none;
-		margin-left: auto;
-	}
-
-	&__item{
-		min-width: 134px;
-		padding: 0 5px;
-		text-align: center;
-
-		&:hover{
-			border-bottom: 3px solid $hover-color;
-			width: 134px;
-			margin-bottom: -38px;
-		}
-		&:active{
-			border-bottom: 3px solid $active-color;
-			width: 134px;
-			margin-bottom: -38px;
-		}
-
-		@media(max-width: 1024px){
-            min-width: 112px;
-        }
-
-		@media(max-width: 320px){
-			display: none;
-		}
-	}
-
-	&__link{
-		text-decoration: none;
-		@include font(13px, 15px, $primary-color);
-		font-weight: 700;
-		text-transform: uppercase;
-
-		&:active{
-			@include font(13px, 15px, $active-color);
-		}
-	}
-
-	.line{
-		border: 1px solid $hover-color;
-		width: 1170px;
-		position: absolute;
-		bottom: 0;
-    	left: 50%;
-    	transform: translateX(-50%);
-
-		@media(max-width: 1024px){
-			width: 984px;
-		}
-		@media(max-width: 320px){
-			display: none;
-		}
-	}
-}
-.banner{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100vh;
-	z-index: 1;
-	background-image: url(/media/banner.png);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-
-	&::before{
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba($color: #252B49, $alpha: 0.8);
-	}
-	&__title{
-		position: relative;
-		@include font(64px, 75px, $primary-color);
-		text-align: center;
-		font-weight: 900;
-		text-transform: uppercase;
-		margin-top: 230px;
-		padding-bottom: 31px;
-
-		@media(max-width: 1024px){
-			@include font(48px, 56px, $primary-color);
-			margin-top: 257px;
-			padding-bottom: 62px;
-		}
-		@media(max-width: 320px){
-			@include font(36px, 42px, $primary-color);
-			margin-top: 106px;
-			padding-bottom: 32px;
-		}
-	}
-	&__subtitle{
-		position: relative;
-		@include font(24px, 28px, $primary-color);
-		text-align: center;
-		margin-bottom: 79px;
-
-		@media(max-width: 1024px){
-			@include font(18px, 21px, $primary-color);
-			margin-bottom: 89px;
-		}
-		@media(max-width: 320px){
-			@include font(14px, 16px, $primary-color);
-			margin-bottom: 49px;
-		}
-	}
-	&__button{
-		position: relative;
-		@include font(24px, 28px, $primary-color);
-		font-weight: 900;
-		text-transform: uppercase;
-		background-color: $button-color;
-		max-width: 370px;
-		width: 100%;
-		padding: 24px 10px;
-		display: block;
-		margin: 0 auto;
-		border: none;
-
-		&:hover{
-			background-color: $active-color;
-		}
-		&:active{
-			background-color: $button-color;
-			box-shadow: 3px 3px 20px 5px rgba(255, 67, 67, 0.8);
-		}
-		@media(max-width: 1024px){
-			max-width: 314px;
-		}
-		@media(max-width: 320px){
-			max-width: 280px;
-			padding: 14px 10px;
-		}
-	}
-}
-.features{
-	margin-top: 100vh; 
-	margin-bottom: 116px;
-
-	@media(max-width: 1024px){
-		margin-bottom: 80px;
-	}
-	@media(max-width: 320px){
-		margin-bottom: 35px;
-	}
-
-	&__container{
-		display: grid;
-		row-gap: 88px;
-		column-gap: 20px;
-		grid-template-columns: repeat(3, 1fr);
-
-		@media(max-width: 1024px){
-			row-gap: 49px;
-		}
-		@media(max-width: 320px){
-			display: block;
-		}
-	}
-	&__item{
-		text-align: center;
-
-		@media(max-width: 320px){
-			margin-bottom: 41px;
-		}
-	}
-	
-	&__wrapper-icon{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100px;
-		height: 100px;
-		margin: auto 134px 29px;
-
-		@media(max-width: 1024px){
-			width: 85px;
-			height: 84px;
-			margin: auto 115px 24px;
-		}
-		@media(max-width: 320px){
-			width: 75px;
-			height: 74px;
-			margin: auto 102px 21px;
-		}
-	}
-	&__title{
-		@include font(24px, 28px, $title-color);
-		font-weight: 900;
-		text-transform: uppercase;
-		padding: 22px 20px;
-		margin-bottom: 20px;
-
-		@media(max-width: 1024px){
-			@include font(18px, 21px, $title-color);
-			padding: 19px 20px;
-			margin-bottom: 4px;
-		}
-		@media(max-width: 320px){
-			@include font(18px, 21px, $title-color);
-			padding: 16px 20px;
-			margin-bottom: 0;
-		}
-	}
-	&__text{
-		@include font(18px, 21px, $text-color);
-
-		@media(max-width: 1024px){
-			@include font(14px, 16px, $text-color);
-		}
-		@media(max-width: 320px){
-			@include font(14px, 16px, $text-color);
-		}
-	}
-}
-
-.work{
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 0;
-
-	@media(max-width: 320px){
-		grid-template-columns: repeat(2, 1fr);
-	}
-
-	&__item{
-		max-width: 379px;
-		width: 100%;
-		position: relative;
-		overflow: hidden;
-
-		&:nth-last-child(-n+4) {
-			margin-bottom: 114px;
-		}
-
-		@media (max-width: 320px) {
-			&:nth-last-child(-n+4) {
-				margin-bottom: 0;
-			}
-			&:nth-last-child(-n+2) {
-				margin-bottom: 35px; 
-			}
-		}
-
-		&:hover::after {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: rgba(255, 67, 67, 0.8);
-		}
-		&:active::after {
-			background-color: rgba(185, 12, 12, 0.8);
-		}
-
-		&:hover .work__content {
-			display: flex;
-		}
-	}
-	&__img{ //высота не такая как в фигме
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		position: relative;
-		z-index: 0;
-	}
-	&__content{
-		display: none;
-		flex-direction: column;
-		align-items: center;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		z-index: 2;
-	}
-	&__title{
-		@include font(24px, 28px, $primary-color);
-		font-weight: 900;
-		text-align: center;
-		text-transform: uppercase;
-		padding: 16px 10px;
-		margin-top: 110px;
-
-		@media(max-width: 1024px){
-			@include font(18px, 21px, $primary-color);
-			margin-top: 84px;
-			padding: 0;
-		}
-		@media(max-width: 320px){
-			@include font(18px, 21px, $primary-color);
-			margin-top: 46px;
-			padding: 0;
-		}
-	}
-	&__text{
-		@include font(18px, 21px, $primary-color);
-		text-align: center;
-		width: 100%;
-		margin-top: 20px;
-
-		@media(max-width: 1024px){
-			@include font(14px, 16px, $primary-color);
-			margin-top: 22px;
-		}
-		@media(max-width: 320px){
-			@include font(14px, 16px, $primary-color);
-			margin-top: 0;
-			margin-bottom: 56px;
-		}
-	}
-}
-.team{
-	margin-bottom: 124px;
-
-	@media(max-width: 1024px){
-		margin-bottom: 78px;
-	}
-	@media(max-width: 320px){
-		margin-bottom: 41px;
-	}
-
-	&__conteiner{
-		display: grid;
-		column-gap: 30px;
-		grid-template-columns: repeat(4, 1fr);
-
-		@media(max-width: 1024px){
-			column-gap: 25px;
-		}
-		@media(max-width: 320px){
-			display: block;
-		}
-	}
-
-	&__avatar-box{
-		padding-bottom: 30px;
-
-		@media(max-width: 1024px){
-			padding-bottom: 27px;
-		}
-		@media(max-width: 320px){
-			padding-bottom: 25px;
-		}
-	}
-	&__avatar{
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-	&__info{
-		padding-bottom: 38px;
-
-		@media(max-width: 1024px){
-			padding-bottom: 39px;
-		}
-		@media(max-width: 320px){
-			padding-bottom: 55px;
-		}
-	}
-	&__name{
-		@include font(24px, 28px, $title-color);
-		font-weight: 700;
-		padding-bottom: 5px;
-
-		@media(max-width: 1024px){
-			@include font(18px, 21px, $title-color);
-		}
-		@media(max-width: 320px){
-			@include font(18px, 21px, $title-color);
-		}
-	}
-	&__role{
-		@include font(18px, 21px, $button-color);
-		text-transform: uppercase;
-		padding-bottom: 18px;
-
-		@media(max-width: 1024px){
-			@include font(14px, 16px,  $button-color);
-			padding-bottom: 22px;
-		}
-		@media(max-width: 320px){
-			@include font(14px, 16px,  $button-color);
-			padding-bottom: 36px;
-		}
-	}
-	&__text{
-		@include font(18px, 21px, $text-color);
-
-		@media(max-width: 1024px){
-			@include font(14px, 16px,  $text-color);
-		}
-		@media(max-width: 320px){
-			@include font(14px, 16px,  $text-color);
-		}
-	}
-	&__socials{
-		display: flex;
-		column-gap: 5px;
-
-		@media(max-width: 320px){
-			column-gap: 6px;
-			padding-bottom: 49px;
-		}
-	}
-	.social__link{
-		text-align: center;
-		border: 1px solid #C6CBCD;
-		max-width: 39px;
-		width: 100%;
-		padding: 8px 8px;
-
-		@media(max-width: 1024px){
-			max-width: 33px;
-			padding: 5px 5px;
-		}
-	}
-}
 .testimonial{
 	margin-bottom: 122px;
 	padding-bottom: 45px;
@@ -522,9 +51,7 @@ $primary-font: "Raleway", sans-serif;
 			grid-template-columns: 49% 51%;
 		}
 		@media(max-width: 767px){
-			display: flex;
-			flex-direction: column;
-			align-items: center;
+			display: block;
 			text-align: center;
 		}
 	}
@@ -548,13 +75,13 @@ $primary-font: "Raleway", sans-serif;
 		@media(max-width: 1024px){
 			padding: 47px 109px 110px 83px;
 		}
-		/*@media(max-width: 767px){
-			padding: 23px 25px 95px 20px;
-		}*/
+		@media(max-width: 767px){
+			padding: 23px 20px 95px;
+		}
 	}
 	&__quote{
 		@include font(36px, 49px, $primary-color);
-		font-family: "Cardo", serif;
+		font-family:"Cardo", serif;
 		margin-bottom: 24px;
 		font-style: italic;
 		text-transform: capitalize;
@@ -563,14 +90,14 @@ $primary-font: "Raleway", sans-serif;
 
 		@media(max-width: 1024px){
 			@include font(24px, 32px, $primary-color);
-			font-family: "Cardo", serif;
-			padding-bottom: 24px;
+			font-family:"Cardo", serif;
 		}
 		@media(max-width: 767px){
 			@include font(24px, 32px, $primary-color);
-			font-family: "Cardo", serif;
-			padding-bottom: 23px;
+			font-family:"Cardo", serif;
+			margin-bottom: 23px;
 			text-align: center;
+			max-width: 100%;
 		}
 	}
 	&__author{
@@ -585,7 +112,7 @@ $primary-font: "Raleway", sans-serif;
 		}
 		@media(max-width: 767px){
 			@include font(12px, 14px, $primary-color);
-			padding: 3px;
+			max-width: 100%;
 		}
 	}
 	.swiper-pagination-bullet{
@@ -609,7 +136,4 @@ $primary-font: "Raleway", sans-serif;
 	.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
 		margin: 0;
 	}
-}
-.download{
-
 }
