@@ -472,16 +472,16 @@ $primary-font: "Raleway", sans-serif;
 			@include font(14px, 16px,  $text-color);
 		}
 	}
-	&__socials{
+	.social-block{
 		display: flex;
 		column-gap: 5px;
 
 		@media(max-width: 767px){
 			column-gap: 6px;
 		}
-	}
-	.social__link{
-		border: 1px solid #C6CBCD;
+
+		&-block__link{
+			border: 1px solid #C6CBCD;
 		width: 39px;
 		height: 39px;
 		display: flex;
@@ -491,6 +491,7 @@ $primary-font: "Raleway", sans-serif;
 		@media(max-width: 1024px){
 			width: 33px;
 			height: 33px;
+		}
 		}
 	}
 }

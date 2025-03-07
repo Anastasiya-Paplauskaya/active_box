@@ -588,18 +588,18 @@
     font-family: "Raleway", sans-serif;
   }
 }
-.team__socials {
+.team .social-block {
   display: flex;
   -moz-column-gap: 5px;
        column-gap: 5px;
 }
 @media (max-width: 767px) {
-  .team__socials {
+  .team .social-block {
     -moz-column-gap: 6px;
          column-gap: 6px;
   }
 }
-.team .social__link {
+.team .social-block-block__link {
   border: 1px solid #C6CBCD;
   width: 39px;
   height: 39px;
@@ -608,7 +608,7 @@
   justify-content: center;
 }
 @media (max-width: 1024px) {
-  .team .social__link {
+  .team .social-block-block__link {
     width: 33px;
     height: 33px;
   }
