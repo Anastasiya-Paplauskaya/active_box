@@ -73,7 +73,22 @@ $primary-font: "Raleway", sans-serif;
 		animation-timing-function: ease-out;
 	}
 }
-
+@keyframes slide-top {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-50px);
+	}
+}
+@keyframes slide-fwd-center {
+	0% {
+		transform: translateZ(0);
+	}
+	100% {
+		transform: translateZ(160px);
+	}
+}
 
 .container{
     max-width: 1170px;
@@ -138,6 +153,7 @@ $primary-font: "Raleway", sans-serif;
 		min-width: 134px;
 		padding: 0 5px;
 		text-align: center;
+		transition: 0.2s;
 
 		&:hover{
 			border-bottom: 3px solid $hover-color;
@@ -249,7 +265,7 @@ $primary-font: "Raleway", sans-serif;
 
 		&:hover{
 			background-color: $active-color;
-			animation: heartbeat 0.3s linear;
+			animation: heartbeat 1.3s linear; 
 		}
 		&:active{
 			background-color: $button-color;
@@ -305,6 +321,10 @@ $primary-font: "Raleway", sans-serif;
 		height: 100px;
 		margin: auto 134px 29px;
 
+		&:hover{
+			animation: slide-top 0.7s cubic-bezier(0.1, 0.25, 0.25, 0.54) both; 
+		}
+
 		@media(max-width: 1024px){
 			width: 85px;
 			height: 84px;
@@ -359,6 +379,7 @@ $primary-font: "Raleway", sans-serif;
 		width: 100%;
 		position: relative;
 		overflow: hidden;
+		transition: 0.3s;
 
 		&:nth-last-child(-n+4) {
 			margin-bottom: 114px;
@@ -542,6 +563,14 @@ $primary-font: "Raleway", sans-serif;
 		max-width: 39px;
 		width: 100%;
 		padding: 8px 8px;
+		transition: 0.3s;
+
+		&:hover{
+			animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; //не работает
+		}
+		&:active{
+			background-color: $active-color;
+		}
 
 		@media(max-width: 1024px){
 			max-width: 33px;
@@ -700,6 +729,7 @@ $primary-font: "Raleway", sans-serif;
 
 		&:hover{
 			background-color: $active-color;
+			animation: heartbeat 1.3s linear;
 		}
 		&:active{
 			background-color: $button-color;
@@ -848,6 +878,13 @@ $primary-font: "Raleway", sans-serif;
 		max-width: 39px;
 		width: 100%;
 		padding: 8px 8px;
+
+		&:hover{
+			animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; //не работает
+		}
+		&:active{
+			background-color: $active-color;
+		}
 
 		@media(max-width: 1024px){
 			max-width: 33px;
